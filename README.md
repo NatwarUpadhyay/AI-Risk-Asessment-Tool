@@ -1,68 +1,96 @@
-# AI-Driven Risk Assessment Tool
+# AI-Driven Business Risk Assessment Tool
 
-## Introduction
-### Project Overview
-This project aims to develop an AI-driven risk assessment tool leveraging Chain of Thought (CoT) reasoning and internet research to evaluate business risks, such as market fluctuations and supply chain disruptions. The model adheres to structured risk analysis methodologies like ISO 31000 and COSO ERM to provide actionable mitigation strategies.
+[![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)  
+[![Gradio](https://img.shields.io/badge/Gradio-UI-brightgreen)](https://gradio.app)
 
-### Business Focus
-The goal is to enable businesses to proactively identify and mitigate risks, ensuring operational continuity and minimizing disruptions.
+## Overview
 
-## Deliverables
-- AI-driven risk analysis and mitigation framework.
-- Business case studies with real-world risk evaluations.
-- Performance assessment framework for AI-generated risk insights.
+This project provides an AI-driven risk assessment tool that uses advanced Chain of Thought (CoT) reasoning and internet research to evaluate business risks. It integrates industry-standard frameworks such as ISO 31000 and COSO ERM to offer actionable risk mitigation strategies. The tool is built with a user-friendly Gradio interface, making it accessible to decision-makers who need real-time risk insights for scenarios like market fluctuations and supply chain disruptions.
 
-## Technical Details
-### Local LLM Benefits
-Using a local Large Language Model (LLM) ensures higher data integrity and ethical AI use, keeping sensitive business data secure from open-source models.
+## Why It Matters in Real Life
 
-### AI Fine-Tuning Parameters
-By leveraging hyperparameters such as:
-- **Top-p**: Controls nucleus sampling for better response diversity.
-- **Temperature**: Adjusts randomness in AI-generated responses.
-- **Maximum length**: Defines the response size limit.
+Businesses operate in an increasingly complex environment where unexpected risks can disrupt operations. By using AI to systematically break down and analyze risk factors, this tool helps organizations:
+- **Proactively Identify Risks:** Quickly recognize potential financial, operational, strategic, and compliance-related risks.
+- **Develop Mitigation Strategies:** Tailor risk mitigation plans that are both cost-effective and aligned with proven risk management frameworks.
+- **Enhance Decision-Making:** Leverage real-world business cases and advanced risk modeling techniques to support critical business decisions.
+- **Ensure Data Integrity:** Utilize a local Large Language Model (LLM) to keep sensitive data secure and maintain ethical AI use.
 
-These parameters enable the model to produce highly relevant, production-level risk assessments.
+## Code Details
 
-## Installation & Usage
+### Key Components:
+- **Model Initialization:**  
+  The tool uses the `meta-llama/Llama-3.2-3B-Instruct` model from Hugging Face. It securely sets the token as an environment variable to authenticate the model retrieval.
+  
+- **Risk Assessment Prompt:**  
+  A detailed prompt is defined to guide the model in evaluating risks. This prompt includes:
+  - **Risk Identification & Categorization:** Examining risks across various business domains.
+  - **Chain of Thought Reasoning:** Step-by-step evaluation using both qualitative and quantitative approaches.
+  - **Mitigation Strategy Development:** Recommendations aligned with risk management standards.
+  - **Performance Evaluation:** Setting KPIs and frameworks to assess the quality of AI-generated insights.
+  
+- **AI Functionality:**  
+  The function `ai_risk_assessment` takes a new business use case as input, appends it to the structured risk prompt, and uses the model to generate a detailed risk assessment. The function also supports GPU acceleration if available.
+  
+- **Interactive Gradio Interface:**  
+  A Gradio-based UI lets users input a business scenario and receive an AI-generated risk assessment in real time. This interactivity makes the tool practical for live risk evaluation sessions.
+
+## Installation
+
 ### Prerequisites
-Ensure you have the following installed:
-- Python 3.8+
-- Jupyter Notebook
-- Hugging Face Transformers
-- OpenAI API (if applicable)
+- Python 3.8 or higher
+- Jupyter Notebook (for development) or a Python environment
+- Required Python packages:
+  - Gradio
+  - Torch
+  - Transformers
 
-### Installation Steps
-1. Clone this repository:
-   ```sh
+### Setup Steps
+1. **Clone the Repository:**
+   ```bash
    git clone https://github.com/yourusername/ai-risk-assessment-tool.git
-   ```
-2. Navigate to the project directory:
-   ```sh
    cd ai-risk-assessment-tool
    ```
-3. Install dependencies:
-   ```sh
+2. **Install Dependencies:**
+   ```bash
    pip install -r requirements.txt
    ```
-4. Run the Jupyter Notebook:
-   ```sh
+   *Or install Gradio directly:*
+   ```bash
+   pip install gradio
+   ```
+3. **Run the Application:**
+   ```bash
+   python AI_Risk_Assessment_Tool.py
+   ```
+   Alternatively, launch the Gradio interface via Jupyter Notebook:
+   ```bash
    jupyter notebook AI_Risk_Assessment_Tool.ipynb
    ```
 
 ## Usage
-1. Load your business risk dataset.
-2. Adjust the hyperparameters as needed.
-3. Run the model to generate risk assessments and mitigation strategies.
-4. Review the AI-generated insights and refine as required.
+
+1. **Input Business Scenario:**  
+   Enter a detailed business use case (e.g., challenges in supply chain management, market expansion risks) in the Gradio UI.
+2. **Generate Risk Analysis:**  
+   Click the "Generate Analysis" button to have the model process your input using the structured risk prompt.
+3. **Review Output:**  
+   Receive a comprehensive risk assessment report with tailored mitigation strategies based on established frameworks.
+4. **Iterate as Needed:**  
+   Modify the input or adjust hyperparameters to explore different risk scenarios.
 
 ## Contributing
-Contributions are welcome! Feel free to fork this repository and submit pull requests.
+
+Contributions are welcome! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for details on how to contribute to the project.
 
 ## License
-This project is licensed under the MIT License.
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any questions or further discussions, please open an issue or contact the maintainers at [your-email@example.com](mailto:your-email@example.com).
 
 ---
-For any queries, please open an issue or contact the project maintainers.
 
-
+*Transform your business risk management with AI-driven insights and proactive mitigation strategies!*
