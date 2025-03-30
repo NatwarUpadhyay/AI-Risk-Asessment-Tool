@@ -81,7 +81,7 @@ Businesses operate in an increasingly complex environment where unexpected risks
 
 ## Contact
 
-For any questions or further discussions, please open an issue or contact the maintainers at [your-email@example.com](mailto:upadhyay.suraj09@gmail.com).
+For any questions or further discussions, please open an issue or contact the maintainers at [NatwrUpadhyay](mailto:upadhyay.suraj09@gmail.com).
 
 ---
 
