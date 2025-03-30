@@ -79,14 +79,6 @@ Businesses operate in an increasingly complex environment where unexpected risks
 4. **Iterate as Needed:**  
    Modify the input or adjust hyperparameters to explore different risk scenarios.
 
-## Contributing
-
-Contributions are welcome! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for details on how to contribute to the project.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
 ## Contact
 
 For any questions or further discussions, please open an issue or contact the maintainers at [your-email@example.com](mailto:upadhyay.suraj09@gmail.com).
